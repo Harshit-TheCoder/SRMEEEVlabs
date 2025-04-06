@@ -1,137 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Developers - SRMIST</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background: #D9EAFD;
-            box-sizing: border-box;
-            padding: 0%;
-            margin: 0%;
-            font-family: 'Poppins', sans-serif;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Developers - SRMIST</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #D9EAFD;
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
-<body class="flex flex-col items-center h-full">
-    
-    <!-- Header -->
-    <header class="w-11/12 mt-5 flex gap-4 bg-[#BCCCDC] border-4 border-slate-400 rounded-2xl p-6 text-center relative shadow-lg">
-        <div>
-          <img src="images/logo1.png" alt="SRM Logo" class="w-40 h-20">
-        </div>
-        <div>
-          <h1 class="text-black text-2xl font-extrabold">Department of Electrical and Electronics Engineering, College of Engineering and Technology</h1>
-          <h1 class="text-black text-2xl font-extrabold">SRM Institute of Science and Technology, Kattankulathur, Chennai - 603203, India</h1>
-        </div>
-        
-        
-      </header>
-    
-    <main class="flex w-11/12 mt-10 gap-8">
-        <!-- Sidebar Navigation -->
-        <nav class="w-1/5 h-[350px] !important bg-[#BCCCDC] border-4 border-slate-400 rounded-2xl p-6 flex flex-col items-center gap-5 shadow-md hover:scale-105 hover:shadow-2xl transition-all duration-500 ease-in-out">
-            <!-- <a href="./index.html" class="text-xl font-semibold text-black hover:text-white hover:underline transition-all duration-200 ease-in-out">Home</a> -->
-            <a href="./index.html" class="text-xl font-semibold text-black hover:text-rose-500 hover:underline transition-all duration-200 ease-in-out">Home</a>
-            <a href="./experiment.html" class="text-xl font-semibold text-black hover:text-rose-500 hover:underline transition-all duration-200 ease-in-out">Experiment</a>
-            <a href="./procedure.html" class="text-xl font-semibold text-black hover:text-rose-500 hover:underline transition-all duration-200 ease-in-out">Procedure</a>
-            <a href="./simulator.html" class="text-xl font-semibold text-black hover:text-rose-500 hover:underline transition-all duration-200 ease-in-out">Simulator</a>
-            <a href="./developers.html" class="text-xl font-semibold text-black hover:text-rose-500 hover:underline transition-all duration-200 ease-in-out">Developers</a>
-            <a href="./feedback.html" class="text-xl font-semibold text-black hover:text-rose-500 hover:underline transition-all duration-200 ease-in-out">Feedback</a>
-        </nav>
+<body class="flex flex-col items-center min-h-screen overflow-x-hidden relative">
 
-        <!-- Main Content -->
-        <section class="w-4/5">
-            <h1 class="text-5xl font-bold text-gray-800 mb-4 text-center font-karla drop-shadow-[4px_4px_6px_rgba(55,55,55,0.3)]">Developers</h1>
+  <!-- Spinner -->
+  <div id="spinner" class="fixed inset-0 z-50 flex items-center justify-center bg-[#BCCCDC]">
+    <svg class="animate-spin h-16 w-16 sm:h-20 sm:w-20 text-rose-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48">
+      <circle class="opacity-25" cx="24" cy="24" r="22" stroke="currentColor" stroke-width="5" />
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+    </svg>
+  </div>
+
+  <!-- Header -->
+  <header class="w-11/12  mt-5 flex flex-col lg:flex-row gap-4 bg-[#BCCCDC] border-4 border-slate-400 rounded-2xl p-4 md:p-6 text-center lg:text-left shadow-lg">
+    <div class="flex justify-center lg:justify-start">
+      <img src="images/logo1.png" alt="SRM Logo" class="w-32 md:w-40 lg:w-40 lg:h-20 h-auto" />
+    </div>
+    <div class="flex flex-col">
+      <h1 class="text-black text-lg md:text-xl lg:text-2xl font-extrabold leading-snug">
+        Department of Electrical and Electronics Engineering, College of Engineering and Technology
+      </h1>
+      <h1 class="text-black text-lg md:text-xl lg:text-2xl font-extrabold leading-snug">
+        SRM Institute of Science and Technology, Kattankulathur, Chennai - 603203, India
+      </h1>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="flex flex-col lg:flex-row w-11/12  mt-10 gap-8 justify-center">
+
+    <!-- Sidebar Navigation -->
+    <nav class="w-full h-[350px] !important lg:w-1/5 bg-[#BCCCDC] border-4 border-slate-400 rounded-2xl p-6 flex flex-col items-center gap-5 shadow-md hover:scale-105 hover:shadow-2xl transition-all duration-500 ease-in-out">
+      <a href="./index.html" class="text-lg font-semibold text-black hover:text-rose-500 hover:underline">Home</a>
+      <a href="./experiment.html" class="text-lg font-semibold text-black hover:text-rose-500 hover:underline">Experiment</a>
+      <a href="./procedure.html" class="text-lg font-semibold text-black hover:text-rose-500 hover:underline">Procedure</a>
+      <a href="./simulator.html" class="text-lg font-semibold text-black hover:text-rose-500 hover:underline">Simulator</a>
+      <a href="./developers.html" class="text-lg font-semibold text-black hover:text-rose-500 hover:underline">Developers</a>
+      <a href="./feedback.html" class="text-lg font-semibold text-black hover:text-rose-500 hover:underline">Feedback</a>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="w-full lg:w-3/4">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 text-center drop-shadow-[4px_4px_6px_rgba(55,55,55,0.3)]">Developers</h1>
+
+      <!-- Faculty Section -->
+      <h3 class="text-2xl font-bold mb-4 text-gray-700">Faculty</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- Faculty Card -->
+        <div class="bg-white p-5 rounded-lg shadow-lg flex items-center gap-4 hover:scale-105 hover:shadow-2xl transition">
+          <img src="./images/Usha_Ma'am.png" alt="Dr. S. Usha" class="w-20 h-20 rounded-lg shadow-md" />
+          <div>
+            <p class="text-xl font-bold text-gray-800">Dr. S. Usha</p>
+            <p class="text-sm text-gray-600">Associate Professor/EEE, SRMIST.</p>
+            <p class="text-sm text-blue-600">Email: <a href="mailto:ushas@srmist.edu.in" class="text-blue-600">ushas@srmist.edu.in</a></p>
+          </div>
+        </div>
+
+        <div class="bg-white p-5 rounded-lg shadow-lg flex items-center gap-4 hover:scale-105 hover:shadow-2xl transition">
+          <img src="./images/Geetha_Ma'am.png" alt="Dr. A. Geetha" class="w-20 h-20 rounded-lg shadow-md" />
+          <div>
+            <p class="text-xl font-bold text-gray-800">Dr. A. Geetha</p>
+            <p class="text-sm text-gray-600">Associate Professor/EEE, SRMIST.</p>
+            <p class="text-sm text-blue-600">Email: <a href="mailto:geetha2@srmist.edu.in" class="text-blue-600">geetha2@srmist.edu.in</a></p>
+          </div>
+        </div>
+
+        <div class="bg-white p-5 rounded-lg shadow-lg flex items-center gap-4 hover:scale-105 hover:shadow-2xl transition">
+          <img src="./images/Uma.jpg" alt="Dr. K. M. Uma Maheswari" class="w-20 h-20 rounded-lg shadow-md" />
+          <div>
+            <p class="text-xl font-bold text-gray-800">Dr. K. M. Uma Maheswari</p>
+            <p class="text-sm text-gray-600">Associate Professor/CTech, SRMIST</p>
+            <p class="text-sm text-blue-600">Email: <a href="mailto:umamahek@srmist.edu.in" class="text-blue-600">umamahek@srmist.edu.in</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Students Section -->
+      <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-700">Students</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Repeat this card for each student -->
+        <div class="bg-white p-4 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition">
+          <p class="text-lg font-bold text-gray-800">Mr. Raman Shekhawat</p>
+          <p class="text-sm text-gray-600">B.Tech (CSE)</p>
+          <p class="text-sm text-blue-600">Email: <a href="mailto:rs8893@srmist.edu.in">rs8893@srmist.edu.in</a></p>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition">
+          <p class="text-lg font-bold text-gray-800">Mr. Harsh Aswani</p>
+          <p class="text-sm text-gray-600">B.Tech (CSE)</p>
+          <p class="text-sm text-blue-600">Email: <a href="mailto:ha1109@srmist.edu.in">ha1109@srmist.edu.in</a></p>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition">
+          <p class="text-lg font-bold text-gray-800">Mr. Harshit Harlalka</p>
+          <p class="text-sm text-gray-600">B.Tech (CSE)</p>
+          <p class="text-sm text-blue-600">Email: <a href="mailto:hh2044@srmist.edu.in">hh2044@srmist.edu.in</a></p>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition">
+          <p class="text-lg font-bold text-gray-800">Mr. Abhiraj Deshmukh</p>
+          <p class="text-sm text-gray-600">B.Tech (CSE)</p>
+          <p class="text-sm text-blue-600">Email: <a href="mailto:ad8973@srmist.edu.in">ad8973@srmist.edu.in</a></p>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition">
+          <p class="text-lg font-bold text-gray-800">Ms. Shivangi Tripathi</p>
+          <p class="text-sm text-gray-600">B.Tech (CSE)</p>
+          <p class="text-sm text-blue-600">Email: <a href="mailto:st9311@srmist.edu.in">st9311@srmist.edu.in</a></p>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition">
+          <p class="text-lg font-bold text-gray-800">Mr. Venkat Rao</p>
+          <p class="text-sm text-gray-600">B.Tech (CSE)</p>
+          <p class="text-sm text-blue-600">Email: <a href="mailto:vd9239@srmist.edu.in">vd9239@srmist.edu.in</a></p>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition">
+            <p class="text-lg font-bold text-gray-800">Mr. Ishan Gaur</p>
+            <p class="text-sm text-gray-600">B.Tech (EEE)</p>
             
-            <!-- Faculty Section -->
-            <h3 class="text-2xl font-bold mb-4 text-gray-700">Faculty</h3>
-            <div class="grid grid-cols-2 gap-6">
-                <div class="bg-white p-5 rounded-lg shadow-lg flex items-center gap-4 hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
-                    <img src="./images/Usha_Ma'am.png" alt="Dr. S. Usha" class="w-24 h-24 rounded-lg shadow-md">
-                    <div>
-                        <p class="text-xl font-bold text-gray-800">Dr. S. Usha</p>
-                        <p class="text-sm text-gray-600">Associate Professor/EEE, SRMIST.</p>
-                        <p class="text-sm text-blue-600">Email: <a href="mailto:ushas@srmist.edu.in" class="text-blue-600">ushas@srmist.edu.in</a></p>
-                    </div>
-                </div>
-                <div class="bg-white p-5 rounded-lg shadow-lg flex items-center gap-4 hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
-                    <img src="./images/Geetha_Ma'am.png" alt="Dr. A. Geetha" class="w-24 h-24 rounded-lg shadow-md">
-                    <div>
-                        <p class="text-xl font-bold text-gray-800">Dr. A. Geetha</p>
-                        <p class="text-sm text-gray-600">Associate Professor/EEE, SRMIST.</p>
-                        <p class="text-sm text-blue-600">Email: <a href="mailto:geetha2@srmist.edu.in" class="text-blue-600">geetha2@srmist.edu.in</a></p>
-                    </div>
-                </div>
+            <p class="text-sm text-blue-600">Email: <a href="mailto:ig2493@srmist.edu.in" class="text-blue-600">ig2493@srmist.edu.in</a></p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition">
+            <p class="text-lg font-bold text-gray-800">Ms. Ragini Rai</p>
+            <p class="text-sm text-gray-600">B.Tech (CSE)</p>
 
-
-                <div class="bg-white p-5 rounded-lg shadow-lg flex items-center gap-4 hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
-                    <img src="./images/Uma.jpg" alt="Dr. K. M. Uma Maheswari" class="w-24 h-24 rounded-lg shadow-md">
-                    <div>
-                        <p class="text-xl font-bold text-gray-800">Dr. K. M. Uma Maheswari</p>
-                        <p class="text-sm text-gray-600">Associate Professor/CTech, SRMIST</p>
-                        <p class="text-sm text-blue-600">Email: <a href="mailto:umamahek@srmist.edu.in" class="text-blue-600">umamahek@srmist.edu.in</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Students Section -->
-            <h3 class="text-2xl font-bold mt-10 mb-4 text-gray-700">Students</h3>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-                <div class="bg-white p-4 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
-                    <p class="text-lg font-bold text-gray-800">Mr. Raman Shekhawat</p>
-                    <p class="text-sm text-gray-600">B.Tech (CSE)</p>
-                    <!-- <p class="text-sm text-gray-600">Email: rs8893@srmist.edu.in</p> -->
-                    <p class="text-sm text-blue-600">Email: <a href="mailto:rs8893@srmist.edu.in" class="text-blue-600">rs8893@srmist.edu.in</a></p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
-                    <p class="text-lg font-bold text-gray-800">Mr. Harsh Aswani</p>
-                    <p class="text-sm text-gray-600">B.Tech (CSE)</p>
-                    <!-- <p class="text-sm text-gray-600">Email: ha1109@srmist.edu.in</p> -->
-                    <p class="text-sm text-blue-600">Email: <a href="mailto:ha1109@srmist.edu.in" class="text-blue-600">ha1109@srmist.edu.in</a></p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
-                    <p class="text-lg font-bold text-gray-800">Mr. Harshit Harlalka</p>
-                    <p class="text-sm text-gray-600">B.Tech (CSE)</p>
-                    <!-- <p class="text-sm text-gray-600">Email: hh2044@srmist.edu.in</p> -->
-                    <p class="text-sm text-blue-600">Email: <a href="mailto:hh2044@srmist.edu.in" class="text-blue-600">hh2044@srmist.edu.in</a></p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
-                    <p class="text-lg font-bold text-gray-800">Mr. Abhiraj Deshmukh</p>
-                    <p class="text-sm text-gray-600">B.Tech (CSE)</p>
-                    <!-- <p class="text-sm text-gray-600">Email: ad8973@srmist.edu.in </p> -->
-                    <p class="text-sm text-blue-600">Email: <a href="mailto:ad8973@srmist.edu.in" class="text-blue-600">ad8973@srmist.edu.in</a></p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
-                    <p class="text-lg font-bold text-gray-800">Ms. Shivangi Tripathi</p>
-                    <p class="text-sm text-gray-600">B.Tech (CSE)</p>
-                    <!-- <p class="text-sm text-gray-600">Email: st9311@srmist.edu.in</p> -->
-                    <p class="text-sm text-blue-600">Email: <a href="mailto:st9311@srmist.edu.in" class="text-blue-600">st9311@srmist.edu.in</a></p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
-                    <p class="text-lg font-bold text-gray-800">Mr. Venkat Rao</p>
-                    <p class="text-sm text-gray-600">B.Tech (CSE)</p>
-                    <!-- <p class="text-sm text-gray-600">Email: -</p> -->
-                    <p class="text-sm text-blue-600">Email: <a href="vd9239@srmist.edu.in" class="text-blue-600">vd9239@srmist.edu.in</a></p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
-                    <p class="text-lg font-bold text-gray-800">Mr. Ishan Gaur</p>
-                    <p class="text-sm text-gray-600">B.Tech (EEE)</p>
-                    <!-- <p class="text-sm text-gray-600">Email: ig2493@srmist.edu.in</p> -->
-                    <p class="text-sm text-blue-600">Email: <a href="mailto:ig2493@srmist.edu.in" class="text-blue-600">ig2493@srmist.edu.in</a></p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
-                    <p class="text-lg font-bold text-gray-800">Mrs. Ragini Rai</p>
-                    <p class="text-sm text-gray-600">B.Tech (CSE)</p>
-                    <!-- <p class="text-sm text-gray-600">Email: rr1190@srmist.edu.in</p> -->
-                    <p class="text-sm text-blue-600">Email: <a href="mailto:rr1190@srmist.edu.in" class="text-blue-600">rr1190@srmist.edu.in</a></p>
-                </div>
-            </div>
-            <br><br><br>
-        </section>
-    </main>
+            <p class="text-sm text-blue-600">Email: <a href="mailto:rr1190@srmist.edu.in" class="text-blue-600">rr1190@srmist.edu.in</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const spinner = document.getElementById('spinner');
+        spinner.style.display = 'none';
+      }, 2000); // Change delay as needed (ms)
+    });
+  </script>
 </body>
 </html>
